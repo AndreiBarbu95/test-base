@@ -2,8 +2,3 @@ FROM nginx:alpine
 
 # Set default background color to blue
 ENV BACKGROUND_COLOR blue
-# Replace the environment variable with the actual value in config.js
-RUN sed -i "s/{BACKGROUND_COLOR}/$BACKGROUND_COLOR/g" /usr/share/nginx/html/config.js
-
-# Expose port 80
-EXPOSE 80

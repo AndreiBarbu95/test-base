@@ -1,4 +1,4 @@
 FROM nginx:alpine
 
 # Set default background color to blue
-ENV BACKGROUND_COLOR blue
+ENV BACKGROUND_COLOR green

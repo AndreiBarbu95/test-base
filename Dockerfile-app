@@ -2,4 +2,9 @@ ARG REGISTRY_NAME
 FROM ${REGISTRY_NAME}/baseimages/nginx:alpine
 
 COPY index.html /usr/share/nginx/html
+COPY config.js /usr/share/nginx/html
+# Replace the environment variable with the actual value in config.js
+RUN sed -i "s/{BACKGROUND_COLOR}/$BACKGROUND_COLOR/g" /usr/share/nginx/html/config.js
+
+# Expose port 80
 EXPOSE 80
